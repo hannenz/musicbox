@@ -1,0 +1,31 @@
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="1e3" width="1e3" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 264.58333 264.58334">
+	<metadata>
+		<rdf:RDF>
+			<cc:Work rdf:about="">
+				<dc:format>image/svg+xml</dc:format>
+				<dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+				<dc:title/>
+			</cc:Work>
+		</rdf:RDF>
+	</metadata>
+	<g stroke-linejoin="round" transform="translate(0 -32.417)" stroke="#555753" stroke-linecap="round">
+		<g style="color-rendering:auto;color:#000000;isolation:auto;mix-blend-mode:normal;paint-order:fill markers stroke;shape-rendering:auto;solid-color:#000000;image-rendering:auto" transform="matrix(8.2151 0 0 8.2151 -76.01 -1019.6)" stroke-width=".1" fill="#fff">
+			<path stroke-linejoin="round" d="m14.363 144 10.583-2.0447 10.375 0.27023-14.489 1.8663z" fill-rule="evenodd" stroke-linecap="butt"/>
+			<path d="m24.946 129.95v12.002l10.375 0.27023v-11.32z"/>
+			<path d="m14.363 137.09 10.583-7.1365v12.002l-10.583 2.0447z"/>
+		</g>
+		<g transform="matrix(4.5218 .31606 -.31606 4.5218 -54.922 -438.16)" fill="none">
+			<path style="color-rendering:auto;color:#000000;isolation:auto;mix-blend-mode:normal;paint-order:fill markers stroke;shape-rendering:auto;solid-color:#000000;image-rendering:auto" d="m59.958 111.67a3.3101 3.3101 0 0 1 1.6552 2.8667 3.3101 3.3101 0 0 1 -1.655 2.8666" stroke-width=".77235"/>
+			<path style="color-rendering:auto;color:#000000;isolation:auto;mix-blend-mode:normal;paint-order:fill markers stroke;shape-rendering:auto;solid-color:#000000;image-rendering:auto" d="m56.648 117.4a3.3101 3.3101 0 0 1 -1.6548 -2.8664 3.3101 3.3101 0 0 1 1.655 -2.8666" stroke-width=".77235"/>
+			<g stroke-width=".77235">
+				<path style="color-rendering:auto;color:#000000;isolation:auto;mix-blend-mode:normal;paint-order:fill markers stroke;shape-rendering:auto;solid-color:#000000;image-rendering:auto" d="m60.733 110.32a4.8608 4.8608 0 0 1 2.4307 4.2098 4.8608 4.8608 0 0 1 -2.4304 4.2096"/>
+				<path style="color-rendering:auto;color:#000000;isolation:auto;mix-blend-mode:normal;paint-order:fill markers stroke;shape-rendering:auto;solid-color:#000000;image-rendering:auto" d="m55.872 118.74a4.8608 4.8608 0 0 1 -2.43 -4.21 4.8608 4.8608 0 0 1 2.43 -4.21"/>
+				<path style="color-rendering:auto;color:#000000;isolation:auto;mix-blend-mode:normal;paint-order:fill markers stroke;shape-rendering:auto;solid-color:#000000;image-rendering:auto" d="m61.538 108.93a6.4709 6.4709 0 0 1 3.2359 5.6042 6.4709 6.4709 0 0 1 -3.2355 5.604"/>
+				<path style="color-rendering:auto;color:#000000;isolation:auto;mix-blend-mode:normal;paint-order:fill markers stroke;shape-rendering:auto;solid-color:#000000;image-rendering:auto" d="m55.067 120.14a6.4709 6.4709 0 0 1 -3.235 -5.6037 6.4709 6.4709 0 0 1 3.2355 -5.604"/>
+			</g>
+			<circle style="color-rendering:auto;color:#000000;isolation:auto;mix-blend-mode:normal;paint-order:fill markers stroke;shape-rendering:auto;solid-color:#000000;image-rendering:auto" stroke-width="1.0583" cy="114.59" cx="58.265" r="1.2695"/>
+		</g>
+		<rect id="card" ry="8.5391" stroke-width=".82151" fill="#fff" style="color-rendering:auto;color:#000000;isolation:auto;mix-blend-mode:normal;paint-order:fill markers stroke;shape-rendering:auto;solid-color:#000000;image-rendering:auto" fill-rule="evenodd" rx="8.5391" transform="rotate(15)" width="86.167" height="135.07" y="77.9" x="182.49"/>
+	</g>
+</svg>

@@ -1,0 +1,27 @@
+.cards {
+	margin: 0;
+}
+
+.card {
+
+	&__location {
+		color: $dark-gray;
+	}
+
+	&__id {
+		color: $dark-gray;
+	}
+
+	&__action-area {
+		margin-top: 1rem;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+	}
+}
+
+.card__action-area {
+	.button {
+		margin: 0 0 0 1rem;
+	}
+}
