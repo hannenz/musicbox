@@ -13,6 +13,9 @@ class CardsController extends AppController {
 
 		if ($_SERVER['SERVER_NAME'] == 'musicbox.localhost') {
 			$this->musicPath = '/home/hannenz/Nextcloud/Johannes';
+			if (!is_dir($this->musicPath)) {
+				$this->musicPath = '/Users/johannesbraun/Music/Local/';
+			}
 		}
 		else {
 			$this->musicPath = '/home/pi/Music';
@@ -23,6 +26,7 @@ class CardsController extends AppController {
 		$folders = $tree[0];
 		$files = $tree[1];
 		array_shift ($folders);
+
 		foreach ($folders as &$folder) {
 			$folder = str_replace($this->musicPath, '', $folder);
 		}
@@ -40,7 +44,7 @@ class CardsController extends AppController {
 		$this->loadComponent ('Paginator');
 		$cards = $this->Paginator->paginate ($this->Cards->find());
 		$this->set (compact ('cards'));
-		$this->render ('index_table');
+		// $this->render ('index_table');
 	}
 
 

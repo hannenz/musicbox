@@ -6,9 +6,11 @@
 	<li class="card">
 		<div class="card-section">
 
-			<!--div class="card__id"><?php echo $card->id ?></div-->
-			<h3 class="card__title"><?php echo $card->name; ?></h3>
-			<div class="card__location"><?php echo $card->uri; ?></div>
+			<div class="card__id"><?php echo $card->id ?></div>
+			<div class="card__body">
+				<h3 class="card__title"><?php echo $card->name; ?></h3>
+				<div class="card__location"><?php echo $card->uri; ?></div>
+			</div>
 
 			<?php if (!empty ($card->hash)): ?>
 				<div class="card__hash">hash: <?php echo $card->hash; ?></div>

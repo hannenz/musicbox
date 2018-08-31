@@ -1,27 +1,81 @@
 .cards {
 	margin: 0;
+	border-bottom: 1px solid #f6f6f6;
 }
 
 .card {
+	width: 100%;
+	border-radius: 0;
+	background-color: #fff;
+	background-image: none;
+	margin: 0;
+	box-shadow: none;
+	border: 1px solid #f6f6f6;
+	border-bottom: 0 !important;
+
+	&-section {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: top;
+	}
+
+	&__body {
+		flex: 1;
+	}
+
+	&:nth-child(odd) {
+		background-color: #f6f6f6;
+	}
 
 	&__location {
 		color: $dark-gray;
+		overflow: hidden;
+		word-wrap: break-word;
 	}
 
 	&__id {
 		color: $dark-gray;
+		width: 3rem;
+		text-align: center;
+		vertical-align: top;
+		transform: translateY(6px);
+		flex: 0 0 3rem;
+		width: 100%;
+		flex: 0 0 100%;
+		text-align: left;
+	}
+
+	&__title {
+		margin: 0;
 	}
 
 	&__action-area {
-		margin-top: 1rem;
 		display: flex;
 		justify-content: flex-end;
 		align-items: center;
+		width: 100%;
+		margin-top: 1.5rem;
+
+		.button {
+			margin: 0 0 0 1rem;
+		}
 	}
 }
 
-.card__action-area {
-	.button {
-		margin: 0 0 0 1rem;
+@media screen and (min-width: 500px) {
+	.cards {
+		.card {
+			&__id {
+				text-align: center;
+				flex: 0 0 3rem;
+			}
+			&__action-area {
+				flex: 0 0 10rem;
+				width: auto;
+				margin-top: 0;
+			}
+		}
 	}
 }
+
