@@ -3,8 +3,38 @@ namespace App\Controller;
 
 use \Cake\Filesystem\Folder;
 use \Cake\Filesystem\File;
+use \Cake\Event\Event;
 
 class CardsController extends AppController {
+
+	public function beforeFilter(Event $event) {
+
+		parent::beforeFilter($event);
+
+		if ($_SERVER['SERVER_NAME'] == 'musicbox.localhost') {
+			$this->musicPath = '/home/hannenz/Nextcloud/Johannes';
+		}
+		else {
+			$this->musicPath = '/home/pi/Music';
+		}
+
+		$folder = new Folder($this->musicPath);
+		$tree = $folder->tree();
+		$folders = $tree[0];
+		$files = $tree[1];
+		array_shift ($folders);
+		foreach ($folders as &$folder) {
+			$folder = str_replace($this->musicPath, '', $folder);
+		}
+		foreach ($files as &$file) {
+			$file = str_replace($this->musicPath, '', $file);
+		}
+
+		$this->set(compact(['folders', 'files']));
+
+	}
+
+
 
 	public function index () {
 		$this->loadComponent ('Paginator');
@@ -16,8 +46,6 @@ class CardsController extends AppController {
 
 
 	public function add () {
-		$folder = new Folder ('/home/hannenz/Nextcloud/Johannes');
-		$this->set ('files', $folder->findRecursive ());
 
 		$card = $this->Cards->newEntity ();
 		if ($this->request->is ('post')) {
@@ -28,9 +56,6 @@ class CardsController extends AppController {
 				$this->Flash->success (sprintf("Card has been saved, id is %s", $card->id));
 
 				return $this->setAction ('write', $card);
-
-
-
 
 
 				return $this->redirect (['action' => 'index']);
@@ -44,9 +69,6 @@ class CardsController extends AppController {
 
 
 	public function edit ($id) {
-
-		$folder = new Folder ('/home/hannenz/Nextcloud/Johannes');
-		$this->set ('files', $folder->findRecursive ());
 
 		$card = $this->Cards->findById ($id)->firstOrFail ();
 		if ($this->request->is (['post', 'put'])) {

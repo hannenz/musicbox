@@ -28,10 +28,23 @@
 	<button class="close-button" data-close>&times;</button>
 	<div>
 		<select id="files">
-			<?php foreach ($files as $file): ?>
-				<option value="<?= $file; ?>"><?= $file ?></option>
-			<?php endforeach ?>
+
+			<optgroup label="Verzeichnisse">
+				<?php foreach ($folders as $folder): ?>
+					<?php $folder = str_replace('/home/pi/Music/', '', $folder); ?>
+					<option value="<?= $folder ?>"><?= $folder ?></option>
+				<?php endforeach ?>
+			</optgroup>
+
+			<optgroup label="Dateien">
+				<?php foreach ($files as $file): ?>
+					<?php $file = str_replace('/home/pi/Music/', '', $file); ?>
+					<option value="<?= $file ?>"><?= $file ?></option>
+				<?php endforeach ?>
+			</optgroup>
+
 		</select>
+
 		<button onclick="javascript: var f=document.getElementById('files').value; console.log (f); document.querySelector('input[name=uri]').value = f; $('#browser').foundation('close'); ">Auswählen</button>
 	</div>
 </div>
