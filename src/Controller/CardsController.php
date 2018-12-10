@@ -12,10 +12,7 @@ class CardsController extends AppController {
 		parent::beforeFilter($event);
 
 		if ($_SERVER['SERVER_NAME'] == 'musicbox.localhost') {
-			$this->musicPath = '/home/hannenz/Nextcloud/Johannes';
-			if (!is_dir($this->musicPath)) {
-				$this->musicPath = '/Users/johannesbraun/Music/Local/';
-			}
+			$this->musicPath = '/mnt/wind-data/Audio/Kinder/Audiobooks';
 		}
 		else {
 			$this->musicPath = '/home/pi/Music';

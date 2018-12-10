@@ -1,4 +1,5 @@
 <p style="text-align: center">Karte mit ID#<span id="cardID"><?= $card->id; ?></span> kann jetzt geschrieben werden. Halten Sie die Karte jetzt an die Box.</p>
+<p style="text-align: center"><strong><?= $card->name ?></strong></p>
 
 <figure class="write-info" style="text-align: center">
 <svg xmlns="http://www.w3.org/2000/svg" height="400" width="400" version="1.1" viewBox="0 0 264.58333 264.58334">

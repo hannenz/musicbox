@@ -3,13 +3,18 @@
     echo $this->Form->create($card);
     echo $this->Form->control('name');
 ?>
-		<div class="input-group">
-			<span class="input-group-label">URI</span>
-			<input class="input-group-field" type="text" name="uri" value="<?php echo $card->uri; ?>">
-			<div class="input-group-button"><button class="button" data-open="browser" type="button">Browse</button></div>
-		</div>
+<div class="input-group">
+	<span class="input-group-label">URI</span>
+	<input class="input-group-field" type="text" name="uri" value="<?php echo $card->uri; ?>">
+	<div class="input-group-button"><button class="button" data-open="browser" type="button">Browse</button></div>
+</div>
 <?php
-    echo $this->Form->button(__('Save Card'));
+	if ($this->Form->isFieldError('uri')) {
+		echo $this->Form->error('uri', 'Eine URI muss angegeben werden');
+	}
+?>
+	<button type="submit" class="button primary">Speichern</button>
+<?php
     echo $this->Form->end();
 ?>
 <?php echo $this->Html->link ('Abbrechen', [
@@ -22,10 +27,24 @@
 	<button class="close-button" data-close>&times;</button>
 	<div>
 		<select id="files">
-			<?php foreach ($files as $file): ?>
-				<option value="<?= $file; ?>"><?= $file ?></option>
-			<?php endforeach ?>
+
+			<optgroup label="Verzeichnisse">
+				<?php foreach ($folders as $folder): ?>
+					<?php $folder = str_replace('/home/pi/Music/', '', $folder); ?>
+					<option value="<?= $folder ?>"><?= $folder ?></option>
+				<?php endforeach ?>
+			</optgroup>
+
+			<optgroup label="Dateien">
+				<?php foreach ($files as $file): ?>
+					<?php $file = str_replace('/home/pi/Music/', '', $file); ?>
+					<option value="<?= $file ?>"><?= $file ?></option>
+				<?php endforeach ?>
+			</optgroup>
+
 		</select>
+
 		<button onclick="javascript: var f=document.getElementById('files').value; console.log (f); document.querySelector('input[name=uri]').value = f; $('#browser').foundation('close'); ">Auswählen</button>
 	</div>
 </div>
+
